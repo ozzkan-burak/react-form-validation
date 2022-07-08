@@ -46,7 +46,7 @@ function App() {
           value={values.fullname}
           onChange={onChange}
           label="İsim Soyisim: "
-          errorMessage="Hata !"
+          errorMessage="İsim - Soyisim alanı boş geçilemez !"
           type="text"
         />
         <FormInput
@@ -55,7 +55,7 @@ function App() {
           value={values.etc}
           onChange={onChange}
           label="ETC : "
-          errorMessage="Hata !"
+          errorMessage="Bu alan boş bırakılamaz !"
           type="text"
         />
         <FormInput
@@ -64,7 +64,7 @@ function App() {
           value={values.etc}
           onChange={onChange}
           label="Şifre : "
-          errorMessage="Hata !"
+          errorMessage="Şifre alanı boş geçilemez !"
           type="password"
         />
         <FormInput
