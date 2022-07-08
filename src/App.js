@@ -18,37 +18,35 @@ function App() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  console.log("values", values);
-
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
         <FormInput
           name="username"
-          placeholder="Username"
+          placeholder="Kullanıcı Adı"
           value={values.username}
           onChange={onChange}
-          label="User Name : "
-          errorMessage="Something went wrong"
+          label="Kullanıcı Adı : "
+          errorMessage="Kullanıcı adı 3-16 karakter arası olmalıdır, özel kaakter içeremez"
           pattern="^[A-Za-z0-9]{3,16}$"
           type="text"
         />
         <FormInput
           name="email"
-          placeholder="Email"
+          placeholder="E-Posta"
           value={values.email}
           onChange={onChange}
-          label="E-mail : "
-          errorMessage="Something went wrong"
+          label="E-Posta : "
+          errorMessage="Geçerli Eposta adresi giriniz"
           type="email"
         />
         <FormInput
           name="fullname"
-          placeholder="Full Name"
+          placeholder="İsim Soyisim"
           value={values.fullname}
           onChange={onChange}
-          label="Full Name : "
-          errorMessage="Something went wrong"
+          label="İsim Soyisim: "
+          errorMessage="Hata !"
           type="text"
         />
         <FormInput
@@ -57,10 +55,28 @@ function App() {
           value={values.etc}
           onChange={onChange}
           label="ETC : "
-          errorMessage="Something went wrong"
+          errorMessage="Hata !"
           type="text"
         />
-        <button>Submit</button>
+        <FormInput
+          name="password"
+          placeholder="Şifre"
+          value={values.etc}
+          onChange={onChange}
+          label="Şifre : "
+          errorMessage="Hata !"
+          type="password"
+        />
+        <FormInput
+          name="confirmPassword"
+          placeholder="Şifre Tekrarı"
+          value={values.etc}
+          onChange={onChange}
+          label="Şifre Tekrarı : "
+          errorMessage="Şifreleriniz uyuşmuyor"
+          type="password"
+        />
+        <button className="submit-button">Gönder</button>
       </form>
     </div>
   );
